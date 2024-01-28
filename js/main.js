@@ -1,1 +1,4 @@
-document.querySelector("[name='texto_inicial']").value = "Digite o seu texto"
+function autoSize(element) {
+    element.style.height = "auto";
+    element.style.height = (element.scrollHeight) + "px";
+}

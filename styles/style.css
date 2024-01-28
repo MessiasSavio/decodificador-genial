@@ -1,0 +1,6 @@
+
+#texto_criptografado {
+    padding: 10px;
+    height: auto;
+    overflow-y: hidden; /* Para ocultar a barra de rolagem vertical inicialmente */
+}
