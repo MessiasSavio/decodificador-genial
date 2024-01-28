@@ -1,0 +1,1 @@
+document.querySelector("[name='texto_inicial']").value = "Digite o seu texto"
