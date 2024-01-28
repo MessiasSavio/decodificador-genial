@@ -4,3 +4,19 @@
     height: auto;
     overflow-y: hidden; /* Para ocultar a barra de rolagem vertical inicialmente */
 }
+
+
+.decodificador{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:end;
+    gap: 8px;
+}
+
+.apresentacao__conteudo {
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+    gap: 8px;
+}

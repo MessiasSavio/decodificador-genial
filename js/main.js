@@ -1,4 +1,5 @@
-function autoSize(element) {
-    element.style.height = "auto";
-    element.style.height = (element.scrollHeight) + "px";
+
+function codificador() {
+    document.getElementById('texto_inicial');
+    
 }

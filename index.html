@@ -16,27 +16,45 @@
     <main>
         <section>
             <div>
-                <input type="text" id="texto_inicial" placeholder="Digite o seu texto">
+                <input 
+                type="text" 
+                id="texto_inicial" 
+                placeholder="Digite o seu texto">
             </div>
         </section>
-        <section>
-            <div>
-                <div>  
-                    <img src="/assents/High quality products 1 1.png" alt="">
-                </div>
-                <div>
+        <section class="box">
+            <div class="decodificador">
+
+                    <img 
+                    src="/assents/High quality products 1 1.png"   
+                    alt="aguardado..0"
+                    width="336px"
+                    height="304px"
+                    
+                    >
                     <h1>Nenhuma mensagem encontrada</h1>
-                </div>
-                <div>
                     <textarea 
                         id="texto_criptografado" 
                         placeholder="Digite um texto que você deseja criptografar ou descriptografar."
                         rows="3"
                         oninput="autoSize(this)"
                     ></textarea>
+            </div>
+        </section>
+        <section class="apresentacao">
+            <div>
+                <div class="apresentacao__conteudo">
+                    <img class="apresentacao__conteudo__imagem" src="/assents/bi_exclamation-circle-fill.png" alt="">
+                    <p class="apresentacao__conteudo__observacao">Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div>
+                    <button type="button">Criptografar</button>
+                    <button type="button">Descriptografar</button>
+
                 </div>
             </div>
         </section>
+
     </main>
 
     <script src="./js/main.js"></script>
