@@ -16,7 +16,12 @@
     <main>
         <section>
             <div>
+                <!--Nota 
+                    onchage = para que quando usuario clicar fora do campo ele execute
+                    oninput = executa enquanto o usuario escrever...
+                -->
                 <input 
+                oninput="capturarValor()"
                 type="text" 
                 id="texto_inicial" 
                 placeholder="Digite o seu texto">
@@ -37,7 +42,6 @@
                         id="texto_criptografado" 
                         placeholder="Digite um texto que você deseja criptografar ou descriptografar."
                         rows="3"
-                        oninput="autoSize(this)"
                     ></textarea>
             </div>
         </section>
