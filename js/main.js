@@ -1,18 +1,3 @@
-function capturarValor() {
-    // Obtém a referência ao elemento de input pelo ID
-    var textoDescritogafadoInicalElement = document.getElementById('texto_inicial');
-
-    // Obtém o valor do input
-    var textoDescritogafadoInical = textoDescritogafadoInicalElement.value;
-
-    // Exibe o valor criptografado no console
-    var textoCriptografado = criptografar(textoDescritogafadoInical);
-    console.log("Texto criptografado: " + textoCriptografado);
-
-    // Exibe o valor descriptografado no console
-    var textoDescriptografado = descriptografar(textoCriptografado);
-    console.log("Texto descriptografado: " + textoDescriptografado);
-  }
 
   function criptografar(texto) {
     // Aplica as regras de criptografia
@@ -35,3 +20,69 @@ function capturarValor() {
     
     return texto;
   }
+
+let campoCriptografado = document.getElementById('texto_inicial').value;
+
+campoCriptografado = criptografar(campoCriptografado);
+
+function criptografarTexto() {
+  // Captura o valor do campo de digitação
+  var textoDigitado = document.getElementById('texto_inicial').value;
+  
+  // Mostra o valor capturado no campo de criptogrado
+  document.getElementById('texto_criptografado').value = criptografar(textoDigitado);
+  
+  if (textoDigitado.trim() !== '') {
+    esconderImagem();
+  } else {
+    mostrarImagem();
+  }
+
+}
+
+function descriptografarTexto() {
+  // Captura o valor do campo de digitação
+  var textoDigitado = document.getElementById('texto_criptografado').value;
+  
+  // Mostra o valor capturado no campo de criptogrado
+  document.getElementById('texto_inicial').value = descriptografar(textoDigitado);
+  
+  if (textoDigitado.trim() !== '') {
+    esconderImagem();
+  } else {
+    mostrarImagem();
+  }
+
+}
+
+function atualizarCampoMostrar() {
+  // Atualiza o campo de mostrar durante a digitação
+  let textoMostrado = document.getElementById('texto_criptografado').value;
+
+  // Mostra o valor atualizado no campo de digitar
+  document.getElementById('texto_criptografado').value = textoMostrado;
+}
+
+
+function ativarDescriptografiaButao() {
+  document.getElementById('acao__criptrografar');
+  document.getElementById('texto_criptografado').value = criptografar(textoDigitado);
+}
+
+function esconderImagem() {
+  var imagem = document.getElementById('img_inicial');
+  var mensagem = document.getElementById('mensagem');
+  
+  imagem.style.display = 'none';
+  mensagem.style.display = 'none';
+}
+
+function mostrarImagem() {
+  var imagem = document.getElementById('img_inicial');
+  var mensagem = document.getElementById('mensagem');
+  
+  imagem.style.display = 'block';
+  mensagem.style.display = 'block';
+}
+
+

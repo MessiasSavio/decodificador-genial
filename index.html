@@ -21,7 +21,7 @@
                     oninput = executa enquanto o usuario escrever...
                 -->
                 <input 
-                oninput="capturarValor()"
+                oninput="criptografarTexto()"
                 type="text" 
                 id="texto_inicial" 
                 placeholder="Digite o seu texto">
@@ -31,15 +31,17 @@
             <div class="decodificador">
 
                     <img 
+                    id="img_inicial"
                     src="/assents/High quality products 1 1.png"   
-                    alt="aguardado..0"
+                    alt="aguardado digitação do usuario para alalisar"
                     width="336px"
                     height="304px"
                     
                     >
-                    <h1>Nenhuma mensagem encontrada</h1>
+                    <h1 id="mensagem">Nenhuma mensagem encontrada</h1>
                     <textarea 
                         id="texto_criptografado" 
+                        oninput="descriptografarTexto()"
                         placeholder="Digite um texto que você deseja criptografar ou descriptografar."
                         rows="3"
                     ></textarea>
@@ -52,9 +54,16 @@
                     <p class="apresentacao__conteudo__observacao">Apenas letras minúsculas e sem acento.</p>
                 </div>
                 <div>
-                    <button type="button">Criptografar</button>
-                    <button type="button">Descriptografar</button>
-
+                    <button 
+                    id="acao__criptrografar" 
+                    type="button"
+                    onclick="ativarCriptografiaButao()"
+                    >Criptografar
+                    </button>
+                    <button id="acao__descptografar" 
+                    type="button"
+                    >Descriptografar
+                    </button>
                 </div>
             </div>
         </section>
