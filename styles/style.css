@@ -1,25 +1,163 @@
-
-#texto_criptografado {
-    padding: 10px;
-    height: auto;
-    overflow-y: hidden; /* Para ocultar a barra de rolagem vertical inicialmente */
+* {
+    line-height: 1.5;
+    transition: 0.2s;
 }
 
+body {
+    background:#d8dfe8;
+}
 
-.decodificador{
+.cabecalho {
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:end;
-    gap: 8px;
+    margin: 40px 0 0 40px;
+    transition: 0.2s;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
 }
 
-.apresentacao__conteudo {
+textarea {
+    resize: none;
+}
+
+.digitacao{
+    flex-direction: row;
+    margin-top: 6%;
+}
+#texto_inicial {
+    margin-top: 3%;
+    margin-left: 100px;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 30px;
+    padding: 0.5rem;
+    font-size: 1.75rem;
+}
+.caractere__errado {
     display: flex;
     justify-content:baseline;
     align-items: center;
     gap: 8px;
+    font-size: 20px;
+    margin-left: 25px;
 }
-#acao__criptrografar{
-    background-color: rgb(42, 50, 165);
+
+.apresentacao__botao {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    margin-left: 15px;
+    margin-bottom: -5%;
+}
+
+#acao__criptrografar {
+    background-color: #0a3871;
+    color: white;
+    width: 325px;
+    height: 60px;
+    border: 1px solid #020202;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 3px 5px 12px  #020202;
+}
+#acao__descptografar {
+    margin-left: 30px;
+    background-color: #d8dfe8;
+    color: #0a3871;
+    width: 325px;
+    height: 60px;
+    border: 1px solid #020202;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 3px 5px 12px  #020202;
+}
+#acao__criptrografar:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: #020202;
+    color: #ffee00;
+}
+#acao__descptografar:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: #020202;
+    color: #ffee00;
+}
+
+.apresentacao__resultado {
+    background-color: white;
+    border-radius: 30px;
+    height: 35rem;
+    width: 32rem;
+    text-align: center;
+    box-shadow: 12px 18px 35px #356ea9;
+    margin-top: -2%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+#mensagem{
+    font-size: 30px;
+}
+#texto_saida {
+    position: relative;
+    border-color: transparent;
+    border-radius: 30px;
+    padding: 0.5rem;
+    text-align: justify;
+    font-size: 2rem;
+    display: none;
+}
+#copiar {
+    width: 225px;
+    height: 60px;
+    border: 1px solid #020202;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 3px 5px 12px  #020202;
+    margin-left: 30%;
+    margin-top: 95%;
+}
+#img_inicial{
+    filter: drop-shadow(10px 17px 5px #98b1ca);
+    transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+#texto_saida:placeholder-shown {
+    background-position: top;
+    background-repeat: no-repeat;
+}
+#texto_saida:not(:placeholder-shown) {
+    background-color: white;
+    color: #020202;
+}
+
+#rodape {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#rodape {
+    text-align: center;
+    margin-top: rem;
+}
+
+.rodape__links {
+    list-style-type: none;
+    padding: 10;
+}
+
+.rodape__links li {
+    display: inline-block;
+}
+
+.rodape__links li:not(:last-child) {
+    margin-right: 10px; /* Adiciona espaço entre os itens, exceto o último */
+}
+
+.rodape__links li a {
+    text-decoration: none;
+    color: #333; /* Cor dos links */
 }

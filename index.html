@@ -1,79 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador de TextosS Gênial</title>
+    <link rel="icon" href="keys-icon.ico" type="image/x-icon"><!--ajustar-->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifolio</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+
 </head>
 <body>
     <header class="cabecalho">
         <nav class="cabecalho__menu">
-            <img class="Imagem__cabecalho" src="./assents/Logo.png" alt="">
+            <img class="Imagem__cabecalho" src="./assents/Logo.png" alt=""  width="120" height="48" />
         </nav>
     </header>
-    <main>
-        <section>
-            <div>
-                <!--Nota 
-                    onchage = para que quando usuario clicar fora do campo ele execute
-                    oninput = executa enquanto o usuario escrever...
-                -->
-                <input 
-                oninput="criptografarTexto()"
-                type="text" 
-                id="texto_inicial" 
-                placeholder="Digite o seu texto">
+    <main class="main">
+        <section class="digitacao">
+            <textarea id="texto_inicial" cols="35" rows="8" placeholder="Digite seu texto..."></textarea>
+            <div class="caractere__errado">
+                <img class="caractere__img" src="/assents/bi_exclamation-circle-fill.png" alt="ateenção">
+                <p class="mensagens_erro">Apenas letras minúsculas e sem acento.</p>
             </div>
-        </section>
-        <section class="box">
-            <div class="decodificador">
 
-                    <img 
-                    id="img_inicial"
-                    src="/assents/High quality products 1 1.png"   
-                    alt="aguardado digitação do usuario para alalisar"
-                    width="336px"
-                    height="304px"
-                    
-                    >
-                    <h1 id="mensagem">Nenhuma mensagem encontrada</h1>
-                    <textarea 
-                        id="texto_criptografado" 
-                        oninput="descriptografarTexto()"
-                        placeholder="Digite um texto que você deseja criptografar ou descriptografar."
-                        rows="3"
-                    ></textarea>
+            <div class="apresentacao__botao">
+                <button id="acao__criptrografar" type="button" onclick="textoCriptografado()">Criptografar</button>
+                <button id="acao__descptografar" type="button" onclick="descriptografarTexto()">Descriptografar</button>
             </div>
         </section>
-        <section class="apresentacao">
-            <div>
-                <div class="apresentacao__conteudo">
-                    <img class="apresentacao__conteudo__imagem" src="/assents/bi_exclamation-circle-fill.png" alt="">
-                    <p class="apresentacao__conteudo__observacao">Apenas letras minúsculas e sem acento.</p>
-                </div>
-                <div>
-                    <button 
-                    id="acao__criptrografar" 
-                    type="button"
-                    onclick="ativarCriptografiaButao()"
-                    >Criptografar
-                    </button>
-                    <button id="acao__descptografar" 
-                    type="button"
-                    >Descriptografar
-                    </button>
-                </div>
-            </div>
+        <section class="apresentacao__resultado">
+            <img id="img_inicial"src="/assents/High quality products 1 1.png"alt="aguardado digitação do usuario para alalisar" width="336px"height="304px">
+            <h1 id="mensagem">Nenhuma mensagem encontrada</h1>
+            <textarea id="texto_saida" cols="20" rows="11" placeholder="" readonly ></textarea>
+            <button type="button" id="copiar">Copiar</button>
         </section>
-
     </main>
-
     <script src="./js/main.js"></script>
-    
-    <footer>
-
+    <footer id="rodape">
+        <ul class="rodape__links">
+            <li><a href="https://www.instagram.com/messias_savio" target="_blank"><img width="60px" height="60px" src="/assents/instagram-logo-instagram-icon-transparent-free-png.png" alt="instagram"></a></li>
+            <li><a href="https://github.com/MessiasSavio" target="_blank"><img width="50px" height="50px" src="/assents/GitHub_Invertocat_Logo.svg.png" alt="linkedin"></a></li>
+            <li><a href="https://www.linkedin.com/in/messiassavio/" target="_blank"><img width="50px" height="50px" src="/assents/linkedin_logo_icon_145102.png" alt=""></a></li>
+        </ul>
     </footer>
+    
+</section>
 </body>
 </html>

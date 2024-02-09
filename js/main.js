@@ -1,88 +1,98 @@
+function criptografar(texto) {
+  // Aplica as regras de criptografia
+  texto = texto.replace(/e/g, "enter");
+  texto = texto.replace(/i/g, "imes");
+  texto = texto.replace(/a/g, "ai");
+  texto = texto.replace(/o/g, "ober");
+  texto = texto.replace(/u/g, "ufat");
 
-  function criptografar(texto) {
-    // Aplica as regras de criptografia
-    texto = texto.replace(/e/g, "enter");
-    texto = texto.replace(/i/g, "imes");
-    texto = texto.replace(/a/g, "ai");
-    texto = texto.replace(/o/g, "ober");
-    texto = texto.replace(/u/g, "ufat");
-    
-    return texto;
+  return texto;
+}
+
+function descriptografar(texto) {
+  // Inverte as regras para descriptografar
+  texto = texto.replace(/ufat/g, "u");
+  texto = texto.replace(/ober/g, "o");
+  texto = texto.replace(/ai/g, "a");
+  texto = texto.replace(/imes/g, "i");
+  texto = texto.replace(/enter/g, "e");
+
+  return texto;
+}
+
+function validarTexto(texto) {
+  // Verifica se o texto contém letras maiúsculas ou caracteres acentuados
+  if (/[A-ZÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÄËÏÖÜ]/.test(texto)) {
+    alert("Por favor, digite apenas letras minúsculas e sem acento.");
+    return false;
   }
+  return true;
+}
 
-  function descriptografar(texto) {
-    // Inverte as regras para descriptografar
-    texto = texto.replace(/ufat/g, "u");
-    texto = texto.replace(/ober/g, "o");
-    texto = texto.replace(/ai/g, "a");
-    texto = texto.replace(/imes/g, "i");
-    texto = texto.replace(/enter/g, "e");
-    
-    return texto;
+function textoCriptografado() {
+  var texto = document.getElementById("texto_inicial").value;
+  if (!validarTexto(texto)) {
+    return;
   }
-
-let campoCriptografado = document.getElementById('texto_inicial').value;
-
-campoCriptografado = criptografar(campoCriptografado);
-
-function criptografarTexto() {
-  // Captura o valor do campo de digitação
-  var textoDigitado = document.getElementById('texto_inicial').value;
+  var textoCriptografado = criptografar(texto);
+  document.getElementById("texto_saida").value = textoCriptografado;
   
-  // Mostra o valor capturado no campo de criptogrado
-  document.getElementById('texto_criptografado').value = criptografar(textoDigitado);
-  
-  if (textoDigitado.trim() !== '') {
+  if (texto.trim() !== "") {
     esconderImagem();
+    mostrarBotao();
   } else {
     mostrarImagem();
-  }
-
+}
 }
 
 function descriptografarTexto() {
-  // Captura o valor do campo de digitação
-  var textoDigitado = document.getElementById('texto_criptografado').value;
-  
-  // Mostra o valor capturado no campo de criptogrado
-  document.getElementById('texto_inicial').value = descriptografar(textoDigitado);
-  
-  if (textoDigitado.trim() !== '') {
+  var texto = document.getElementById("texto_inicial").value;
+  if (!validarTexto(texto)) {
+    return;
+  }
+  var textoDescriptografado = descriptografar(texto);
+  document.getElementById("texto_saida").value = textoDescriptografado;
+
+  if (texto.trim() !== "") {
     esconderImagem();
+    mostrarBotao();
   } else {
     mostrarImagem();
   }
-
-}
-
-function atualizarCampoMostrar() {
-  // Atualiza o campo de mostrar durante a digitação
-  let textoMostrado = document.getElementById('texto_criptografado').value;
-
-  // Mostra o valor atualizado no campo de digitar
-  document.getElementById('texto_criptografado').value = textoMostrado;
 }
 
 
-function ativarDescriptografiaButao() {
-  document.getElementById('acao__criptrografar');
-  document.getElementById('texto_criptografado').value = criptografar(textoDigitado);
-}
 
 function esconderImagem() {
-  var imagem = document.getElementById('img_inicial');
-  var mensagem = document.getElementById('mensagem');
-  
-  imagem.style.display = 'none';
-  mensagem.style.display = 'none';
+  var imagem = document.getElementById("img_inicial");
+  var mensagem = document.getElementById("mensagem");
+
+  imagem.style.display = "none";
+  mensagem.style.display = "none";
 }
 
 function mostrarImagem() {
-  var imagem = document.getElementById('img_inicial');
-  var mensagem = document.getElementById('mensagem');
+  var imagem = document.getElementById("img_inicial");
+  var mensagem = document.getElementById("mensagem");
+  var mensagem = document.getElementById("mensagem");
+
+  imagem.style.display = "block";
+  imagem.style.alignItems = "center";
   
-  imagem.style.display = 'block';
-  mensagem.style.display = 'block';
+  imagem.style.marginRight ="25%";
+  mensagem.style.display = "block";
+  mensagem.style.textAlign ="center";
+
 }
 
+function copy() {
+  var copiar = document.getElementById("copiar");
+  navigator.clipboard.writeText(copiar.value);
+}
+let BotaoCopiar = document.getElementById("copiar");
+BotaoCopiar.style.display = "none";
 
+function mostrarBotao() {
+  BotaoCopiar.style.display = "block";
+
+}
