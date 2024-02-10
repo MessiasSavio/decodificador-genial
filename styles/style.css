@@ -1,10 +1,45 @@
+:root {
+    --cor-primaria: #0a3871;
+    --cor-secundaria: #d8dfe8;
+    --cor--teciaraia: #020202; 
+    --cor--quartenaria: #ffee00; 
+    --cor--quintenaria: #2a77d5; 
+
+
+    --COR--HOUVER: ##8ea88d; 
+    --forte--primaria:  'Krona One', sans-serif;
+    --forte--secundaria:  'Montserrat', sans-serif;
+}
 * {
     line-height: 1.5;
     transition: 0.2s;
-}
+/* Funciona no Firefox */
+
+    scrollbar-width: thin;
+    scrollbar-color: #2a77d5 var(--cor-secundaria);
+    
+  }
+  
+  /* Funciona no Chrome, Edge e Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--cor-primaria);
+    border-radius: 20px; /* Arredonda as bordas da barra de rolagem */
+    border: 3px solid var(--cor-secundaria);
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--cor-secundaria);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--cor-primaria);
+    border-radius: 20px;
+    border: 3px solid var(--cor-secundaria);
+  }
 
 body {
-    background:#d8dfe8;
+    background:var(--cor-secundaria);
 }
 
 .cabecalho {
@@ -53,37 +88,43 @@ textarea {
 }
 
 #acao__criptrografar {
-    background-color: #0a3871;
+    background-color: var(--cor-primaria);
     color: white;
     width: 325px;
     height: 60px;
-    border: 1px solid #020202;
+    border: 1px solid var(--cor--teciaraia);
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 3px 5px 12px  #020202;
+    box-shadow: 3px 5px 12px  var(--cor--teciaraia);
+    font-size: 25px;
 }
 #acao__descptografar {
     margin-left: 30px;
-    background-color: #d8dfe8;
-    color: #0a3871;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
     width: 325px;
     height: 60px;
-    border: 1px solid #020202;
+    border: 1px solid var(--cor--teciaraia);
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 3px 5px 12px  #020202;
+    box-shadow: 3px 5px 12px  var(--cor--teciaraia);
+    font-size: 25px;
+
 }
 #acao__criptrografar:hover {
     transition: 0.5s;
     transform: scale(1.1);
-    background-color: #020202;
-    color: #ffee00;
+    background-color: var(--cor--quintenaria);
+    color: white;
+    font-size: 40px;
 }
 #acao__descptografar:hover {
     transition: 0.5s;
     transform: scale(1.1);
-    background-color: #020202;
-    color: #ffee00;
+    background-color: var(--cor--quintenaria);
+    color: white;
+    font-size: 40px;
+
 }
 
 .apresentacao__resultado {
@@ -92,7 +133,7 @@ textarea {
     height: 35rem;
     width: 32rem;
     text-align: center;
-    box-shadow: 12px 18px 35px #356ea9;
+    box-shadow: 12px 18px 35px var(--cor--quintenaria);
     margin-top: -2%;
     margin-left: 5%;
     align-items: center;
@@ -101,6 +142,7 @@ textarea {
 
 #mensagem{
     font-size: 30px;
+    font-style: italic;
 }
 #texto_saida {
     position: relative;
@@ -110,28 +152,43 @@ textarea {
     text-align: justify;
     font-size: 2rem;
     display: none;
+    margin-top: 2%;
+    margin-left: 3%;
+    width: 90%;
+    height: 80%;
 }
 #copiar {
     width: 225px;
     height: 60px;
-    border: 1px solid #020202;
+    border: 1px solid var(--cor--teciaraia);
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 3px 5px 12px  #020202;
+    box-shadow: 3px 5px 12px  var(--cor--teciaraia);
     margin-left: 30%;
-    margin-top: 95%;
+    margin-top: 2%;
+    font-size: 25px;
 }
+#copiar:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: var(--cor--quintenaria);
+    color: white;
+    font-size: 40px;
+}
+
 #img_inicial{
-    filter: drop-shadow(10px 17px 5px #98b1ca);
+    filter: drop-shadow(10px 17px 5px var(--cor-primaria));
     transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    margin-left: 15%;
 }
 #texto_saida:placeholder-shown {
     background-position: top;
     background-repeat: no-repeat;
+    transition: cubic-bezier(0.6, 0.4, 0.98, 0.335);
 }
 #texto_saida:not(:placeholder-shown) {
     background-color: white;
-    color: #020202;
+    color: var(--cor--teciaraia);
 }
 
 #rodape {
@@ -141,7 +198,7 @@ textarea {
 
 #rodape {
     text-align: center;
-    margin-top: rem;
+    margin-top: 6rem;
 }
 
 .rodape__links {
@@ -159,5 +216,5 @@ textarea {
 
 .rodape__links li a {
     text-decoration: none;
-    color: #333; /* Cor dos links */
+    color: var(--cor--teciaraia); /* Cor dos links */
 }

@@ -20,10 +20,10 @@
     </header>
     <main class="main">
         <section class="digitacao">
-            <textarea id="texto_inicial" cols="35" rows="8" placeholder="Digite seu texto..."></textarea>
+            <textarea id="texto_inicial" cols="35" rows="8" placeholder="Digite seu texto aqui..."></textarea>
             <div class="caractere__errado">
                 <img class="caractere__img" src="/assents/bi_exclamation-circle-fill.png" alt="ateenção">
-                <p class="mensagens_erro">Apenas letras minúsculas e sem acento.</p>
+                <p id="mensagem__erro" class="mensagens_erro">Apenas letras minúsculas e sem acento.</p>
             </div>
 
             <div class="apresentacao__botao">
@@ -33,17 +33,17 @@
         </section>
         <section class="apresentacao__resultado">
             <img id="img_inicial"src="/assents/High quality products 1 1.png"alt="aguardado digitação do usuario para alalisar" width="336px"height="304px">
-            <h1 id="mensagem">Nenhuma mensagem encontrada</h1>
-            <textarea id="texto_saida" cols="20" rows="11" placeholder="" readonly ></textarea>
-            <button type="button" id="copiar">Copiar</button>
+            <h1 id="mensagem"><b>Nenhuma mensagem encontrada</b></h1>
+            <textarea id="texto_saida" cols="20" rows="10" placeholder="" readonly ></textarea>
+            <button type="button" id="copiar" onclick="copy()">Copiar</button>
         </section>
     </main>
     <script src="./js/main.js"></script>
     <footer id="rodape">
         <ul class="rodape__links">
-            <li><a href="https://www.instagram.com/messias_savio" target="_blank"><img width="60px" height="60px" src="/assents/instagram-logo-instagram-icon-transparent-free-png.png" alt="instagram"></a></li>
-            <li><a href="https://github.com/MessiasSavio" target="_blank"><img width="50px" height="50px" src="/assents/GitHub_Invertocat_Logo.svg.png" alt="linkedin"></a></li>
-            <li><a href="https://www.linkedin.com/in/messiassavio/" target="_blank"><img width="50px" height="50px" src="/assents/linkedin_logo_icon_145102.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/messias_savio" ><img width="60px" height="60px" src="/assents/instagram-logo-instagram-icon-transparent-free-png.png" alt="instagram"></a></li>
+            <li><a href="https://github.com/MessiasSavio" ><img width="50px" height="50px" src="/assents/GitHub_Invertocat_Logo.svg.png" alt="linkedin"></a></li>
+            <li><a href="https://www.linkedin.com/in/messiassavio/"><img width="50px" height="50px" src="/assents/linkedin_logo_icon_145102.png" alt=""></a></li>
         </ul>
     </footer>
     
