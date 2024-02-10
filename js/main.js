@@ -1,3 +1,11 @@
+const imagem = document.getElementById("img_inicial");
+var mensagem = document.getElementById("mensagem");
+var mensagem1 = document.getElementById("mensagem__aguardando");
+const digitar1 = document.querySelector("#texto_inicial");
+const digitar2 = document.querySelector("#texto_saida");
+const btnCopiar = document.getElementById("copiar");
+const larguraPagina = window.innerWidth; // Altura da janela do navegador
+const apresentacaoResultado = document.querySelector('.apresentacao__resultado');
 function criptografar(texto) {
   // Aplica as regras de criptografia
   texto = texto.replace(/e/g, "enter");
@@ -22,8 +30,9 @@ function descriptografar(texto) {
 
 function validarTexto(texto) {
   // Verifica se o texto contém letras maiúsculas ou caracteres acentuados
-  if (/[A-ZÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÄËÏÖÜzáéíóúàèìòùâêîôûãõäëïöü]/.test(texto)) {
+  if (/[A-ZÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÄËÏÖÜáéíóúàèìòùâêîôûãõäëïöü]/.test(texto)) {
     alert("Por favor, digite apenas letras minúsculas e sem acento.");
+    mostrarImagem();
     return false;
   }
   return true;
@@ -37,17 +46,32 @@ function textoCriptografado() {
 
   // Verifica se o texto contém pelo menos uma vogal
   if (!/[aeiou]/.test(texto)) {
-    alert('Presisamos de ao menos 1 vogal para ser criptografada');
+    alert('Presisamos de ao menos 1 vogal para que sua mensagem possa ser criptografada!');
+    mostrarImagem();
     alert('Digite algo para ser criptografado ou descriptografado!');
     return;
   }
 
   var textoCriptografado = criptografar(texto);
-  document.getElementById("texto_saida").value = textoCriptografado;
+  digitar2.value = textoCriptografado;
 
   if (texto.trim() !== "") {
     esconderImagem();
     mostrarBotao();
+    let textoBotao = document.getElementById('acao__criptrografar');
+
+    function criptografando(){
+      textoBotao.innerText ="Criptografado!";
+      textoBotao.style.background ='#1e78a2';
+      textoBotao.style.color ='white';
+
+      setTimeout(function() {
+        textoBotao.innerText ="Criptografar";
+        textoBotao.style.background ='var(--cor-primaria)';
+        textoBotao.style.color ='white';
+      },3000);
+    }
+    textoBotao.addEventListener('click',criptografando());
   } else {
     mostrarImagem();
     alert('Digite algo para ser criptografado ou descriptografado!');
@@ -69,11 +93,25 @@ function descriptografarTexto() {
   }
 
   var textoDescriptografado = descriptografar(texto);
-  document.getElementById("texto_saida").value = textoDescriptografado;
+  digitar2.value = textoDescriptografado;
 
   if (texto.trim() !== "") {
     esconderImagem();
     mostrarBotao();
+    let textoBotao = document.getElementById('acao__descptografar')
+
+    function criptografando(){
+      textoBotao.innerText ="Descriptogafado!";
+      textoBotao.style.background ='#1e78a2';
+      textoBotao.style.color ='white';
+
+      setTimeout(function() {
+        textoBotao.innerText ="Descriptografar";
+        textoBotao.style.background ='var(--cor-secundaria)';
+        textoBotao.style.color ='var(--cor-primaria)';
+      },3000);
+    };
+    textoBotao.addEventListener('click',criptografando());
   } else {
     mostrarImagem();
     alert('Digite algo para ser criptografado ou descriptografado!');
@@ -81,37 +119,34 @@ function descriptografarTexto() {
 }
 
 function esconderImagem() {
-  var imagem = document.getElementById("img_inicial");
-  var mensagem = document.getElementById("mensagem");
-
   imagem.style.display = "none";
   mensagem.style.display = "none";
+  mensagem1.style.display = "none";
+  if(larguraPagina>400 && larguraPagina<1200) {
+    apresentacaoResultado.style.height = '343px';
+  }
 }
 
 function mostrarImagem() {
-  var imagem = document.getElementById("img_inicial");
-  var mensagem = document.getElementById("mensagem");
-  let texto = document.getElementById("texto_saida");
-  imagem.style.display = "block";
+  larguraPagina>1200 ? imagem.style.display = "block" : imagem.style.display = "none";
   mensagem.style.display = 'block';
-  mensagem.style.textAlign = "center";
-  BotaoCopiar.style.display = "none";
-  texto.style.display = "none";
+  mensagem1.style.display = 'block';
+  btnCopiar.style.display = "none";
+  digitar2.style.display = "none";
+  if(larguraPagina>400 && larguraPagina<1200) {
+    apresentacaoResultado.style.height = '133px';
+    apresentacaoResultado.style.display = 'flex'
+  }
 }
-const digitar1 = document.querySelector("#texto_inicial")
-const digitar2 = document.querySelector("#texto_saida")
-const btnCopiar = document.getElementById("copiar")
-
 
 function copy() {
   navigator.clipboard.writeText(digitar2.value);
 
   // Alterar o texto do botão para "Copiado!" imediatamente
   btnCopiar.innerText = "Copiado!";
-  btnCopiar.style.backgroundColor = "green";
+  btnCopiar.style.backgroundColor = "#50b10c";
   btnCopiar.style.color = "white";
-  btnCopiar.style.fontSize = "25px"
-
+  btnCopiar.style.fontSize = "25px";
 
   // Agendar a mudança de volta para o texto original após 5 segundos
   setTimeout(function() {
@@ -123,13 +158,10 @@ function copy() {
 
 // Adicionar um ouvinte de evento de clique ao botão
 btnCopiar.addEventListener("click", copy);
-
-
-let BotaoCopiar = document.getElementById("copiar");
-BotaoCopiar.style.display = "none";
+btnCopiar.style.display = "none";
 
 function mostrarBotao() {
-  BotaoCopiar.style.display = "block";
-  let textArea = document.getElementById('texto_saida')
-  textArea.style.display = "flex"
+  btnCopiar.style.display = "block";
+  digitar2.style.display = "flex";
 }
+
