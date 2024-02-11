@@ -22,24 +22,24 @@
 }
 
 /* Funciona no Chrome, Edge e Safari */
-*::-webkit-scrollbar {
+* ::-webkit-scrollbar {
   width: 12px;
   background-color: var(--cor-primaria);
   border-radius: 20px; /* Arredonda as bordas da barra de rolagem */
   border: 3px solid var(--cor-secundaria);
 }
 
-*::-webkit-scrollbar-track {
+* ::-webkit-scrollbar-track {
   background: var(--cor-secundaria);
 }
 
-*::-webkit-scrollbar-thumb {
+* ::-webkit-scrollbar-thumb {
   background-color: var(--cor-primaria);
   border-radius: 20px;
   border: 3px solid var(--cor-secundaria);
 }
 
-body {
+.body {
   background: var(--cor-secundaria);
 }
 
@@ -85,8 +85,6 @@ textarea {
   display: flex;
   flex-direction: row;
   margin-top: 2%;
-  margin-left: 15px;
-  margin-bottom: -5%;
 }
 
 #acao__criptrografar {
@@ -139,7 +137,7 @@ textarea {
 #mensagem {
   font-size: 24px;
   font-weight: 700px;
-  line-height: 28.8px;
+  font-weight: bold;
 }
 #texto_saida {
   position: relative;
@@ -162,14 +160,14 @@ textarea {
   cursor: pointer;
   box-shadow: 3px 5px 12px var(--cor--teciaraia);
   margin-left: 30%;
-  margin-top: 2%;
+  margin-top: 3%;
   font-size: 25px;
   align-items: center;
   justify-content: center;
 }
 #copiar:hover {
   transition: 0.5s;
-  transform: scale(1.1);
+  transform: scale(1.2);
   background-color: var(--cor--quintenaria);
   color: white;
   border: #0a3871;
@@ -237,6 +235,7 @@ textarea {
 @media (min-width: 601px) and (max-width: 1200px) {
   /* Seus estilos aqui */
   .main {
+    margin-left: 7 px;
     display: flex;
     flex-direction: column;
   }
@@ -291,11 +290,105 @@ textarea {
   #img_inicial {
     display: none;
   }
+  #mensagem__aguardando{
+    margin-top: -10px;
+    text-align: center;
+
+    text-align: center;
+    margin-left: 10px;
+    margin: 20px;
+  }
   #texto_saida {
     width: 600px;
     height: 180px;
-    margin-top: 15px;
+    margin-top: 5%;
+    margin-left: 5%;
+
+
+  }
+
+  #copiar {
+    margin-top: 20px;
+    width: 497px;
+    height:67px ;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 0px 0px;
+    margin-left: 90px;
+  }
+}
+
+/* Estilos para telas menores que 600px (celulares) */
+@media (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .cabecalho {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px 0px 0px;
+    margin-left: -20px;
+    transition: 0.2s;
+  }
+  #texto_inicial {
+    margin-top: 56px;
+    flex-direction: row;
+    margin: 20px 0px 0px 20px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .caractere__errado {
+    align-items: baseline;
+    margin: 40px 0px 0px 40px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .apresentacao__botao {
+    display: flex;
     margin: 0px 0px 0px 0px;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    align-items: baseline;
+  }
+  #acao__criptrografar {
+    width: 510px;
+    font-size: 20px;
+    height: 82px;
+  }
+  #acao__descptografar {
+    width: 510px;
+    font-size: 20px;
+    height: 82px;
+    margin-bottom: 70px;
+  }
+  .apresentacao__resultado {
+    width: 510px;
+    height: 186px;
+    flex-direction: column;
+    display: flex;
+  }
+
+  #img_inicial {
+    display: none;
+  }
+
+  #mensagem {
+    font-size: 27px;
+    font-weight: 700px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+    margin-left: 10px;
+    
+  }
+  #mensagem__aguardando{
+    margin-top: -10px;
+    font-size: 24px;
+    text-align: justify;
+    margin-left: 10px;
+    margin: 20px;
   }
 
   #copiar {
@@ -304,8 +397,4 @@ textarea {
     justify-content: center;
     margin: 0px 0px 0px 0px;
   }
-}
-
-/* Estilos para telas menores que 600px (celulares) */
-@media (max-width: 600px) {
 }

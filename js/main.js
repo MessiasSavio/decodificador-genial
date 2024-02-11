@@ -122,9 +122,11 @@ function esconderImagem() {
   imagem.style.display = "none";
   mensagem.style.display = "none";
   mensagem1.style.display = "none";
-  if(larguraPagina>400 && larguraPagina<1200) {
+  if(larguraPagina>600 && larguraPagina<1200) {
     apresentacaoResultado.style.height = '343px';
   }
+  larguraPagina<=600 ? apresentacaoResultado.style.height = '600px': '';
+
 }
 
 function mostrarImagem() {
@@ -133,9 +135,10 @@ function mostrarImagem() {
   mensagem1.style.display = 'block';
   btnCopiar.style.display = "none";
   digitar2.style.display = "none";
-  if(larguraPagina>400 && larguraPagina<1200) {
+  if(larguraPagina>600 && larguraPagina<1200) {
     apresentacaoResultado.style.height = '133px';
-    apresentacaoResultado.style.display = 'flex'
+  }else if(larguraPagina<=600) {
+    apresentacaoResultado.style.height = '186px';
   }
 }
 
