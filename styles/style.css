@@ -238,7 +238,6 @@ textarea {
 @media (min-width: 601px) and (max-width: 1200px) {
   /* Seus estilos aqui */
   .main {
-    margin-left: 7 px;
     display: flex;
     flex-direction: column;
   }
