@@ -128,7 +128,7 @@ function esconderImagem() {
 }
 
 function mostrarImagem() {
-  larguraPagina>1200 ? imagem.style.display = "block" : imagem.style.display = "none";
+  larguraPagina>1200 ? imagem.style.display = "flex" : imagem.style.display = "none";
   mensagem.style.display = 'block';
   mensagem1.style.display = 'block';
   btnCopiar.style.display = "none";
@@ -161,7 +161,7 @@ btnCopiar.addEventListener("click", copy);
 btnCopiar.style.display = "none";
 
 function mostrarBotao() {
-  btnCopiar.style.display = "block";
+  btnCopiar.style.display = "flex";
   digitar2.style.display = "flex";
 }
 
