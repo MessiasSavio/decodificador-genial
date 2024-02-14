@@ -122,6 +122,7 @@ function esconderImagem() {
   imagem.style.display = "none";
   mensagem.style.display = "none";
   mensagem1.style.display = "none";
+
   if(larguraPagina>600 && larguraPagina<1200) {
     apresentacaoResultado.style.height = '343px';
   }

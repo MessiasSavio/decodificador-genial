@@ -17,6 +17,7 @@
   font-weight: 400;
   padding: 0;
   margin: 0;
+  margin-left: 0px;
   /* Funciona no Firefox */
 
   scrollbar-width: thin;
@@ -43,6 +44,7 @@
 
 .body {
   background: var(--cor-secundaria);
+  
 }
 
 .cabecalho {
@@ -358,12 +360,12 @@ textarea {
     align-items: baseline;
   }
   #acao__criptrografar {
-    width: 510px;
+    width: 90vw;
     font-size: 20px;
     height: 82px;
   }
   #acao__descptografar {
-    width: 510px;
+    width: 500px;
     font-size: 20px;
     height: 82px;
     margin-bottom: 70px;
