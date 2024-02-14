@@ -132,8 +132,8 @@ function esconderImagem() {
 
 function mostrarImagem() {
   larguraPagina>1200 ? imagem.style.display = "flex" : imagem.style.display = "none";
-  mensagem.style.display = 'block';
-  mensagem1.style.display = 'block';
+  mensagem.style.display = 'flex';
+  mensagem1.style.display = 'flex';
   btnCopiar.style.display = "none";
   digitar2.style.display = "none";
   if(larguraPagina>600 && larguraPagina<1200) {
@@ -141,8 +141,8 @@ function mostrarImagem() {
   }else if(larguraPagina<=600) {
     apresentacaoResultado.style.height = '186px';
   }
+  
 }
-
 function copy() {
   navigator.clipboard.writeText(digitar2.value);
 

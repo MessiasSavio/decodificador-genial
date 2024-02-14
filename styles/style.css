@@ -15,8 +15,8 @@
   transition: 0.2s;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   margin-left: 0px;
   /* Funciona no Firefox */
 
@@ -139,9 +139,13 @@ textarea {
 }
 
 #mensagem {
+  display: flex;
   font-size: 24px;
   font-weight: 700px;
   font-weight: bold;
+  text-align: center;
+  justify-content: center;
+
 }
 #texto_saida {
   position: relative;
@@ -182,6 +186,8 @@ textarea {
   filter: drop-shadow(10px 17px 5px var(--cor-primaria));
   transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
   margin-left: 15%;
+  justify-content: center;
+  align-items: center;
 }
 #mensagem__aguardando {
   font-size: 16px;
@@ -214,7 +220,7 @@ textarea {
   );
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  width: 120%;
 }
 
 .rodape__links {
@@ -354,25 +360,18 @@ textarea {
   .apresentacao__botao {
     display: flex;
     margin: 0px 0px 0px 0px;
-    width: 90%;
+    width: 90vw;
     flex-direction: column;
     gap: 30px;
-    align-items: baseline;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
   }
-  #acao__criptrografar {
-    width: 470px;
-    font-size: 20px;
-    height: 82px;
-  }
-  #acao__descptografar {
-    width: 470px;
-    font-size: 20px;
-    height: 82px;
-    margin-bottom: 70px;
-  }
+
   .apresentacao__resultado {
+    padding: 5%;
     margin: 0px 0px 0px 0px;
-    width: 80%;
+    width: 300px;
     height: 300px;
     flex-direction: column;
     display: flex;
@@ -394,11 +393,11 @@ textarea {
     
   }
   #mensagem__aguardando{
-    margin-top: -10px;
+
     font-size: 24px;
     text-align: justify;
-    margin-left: 10px;
     margin: 0px 0px 0px 0px;
+    padding: 5%;
   }
 
   #copiar {
@@ -407,4 +406,5 @@ textarea {
     justify-content: center;
     margin: 0px 0px 0px 0px;
   }
+
 }
