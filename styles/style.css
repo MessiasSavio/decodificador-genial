@@ -348,7 +348,7 @@ textarea {
     margin-top: 56px;
     flex-direction: row;
     margin: 20px 0px 0px 20px;
-    width: 90%;
+    width: 100%;
     margin-bottom: 20px;
   }
   .caractere__errado {
@@ -356,6 +356,7 @@ textarea {
     margin: 40px 0px 0px 40px;
     align-items: center;
     margin-bottom: 20px;
+    font-size: 12px;
   }
   .apresentacao__botao {
     display: flex;
@@ -367,11 +368,12 @@ textarea {
     justify-content: center;
     margin-bottom: 25px;
   }
+  .tex
 
   .apresentacao__resultado {
     padding: 5%;
     margin: 0px 0px 0px 0px;
-    width: 300px;
+    width: 400px;
     height: 300px;
     flex-direction: column;
     display: flex;
