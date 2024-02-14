@@ -360,21 +360,23 @@ textarea {
     align-items: baseline;
   }
   #acao__criptrografar {
-    width: 475px;
+    width: 470px;
     font-size: 20px;
     height: 82px;
   }
   #acao__descptografar {
-    width: 500px;
+    width: 470px;
     font-size: 20px;
     height: 82px;
     margin-bottom: 70px;
   }
   .apresentacao__resultado {
-    width: 510px;
-    height: 186px;
+    margin: 0px 0px 0px 0px;
+    width: 80%;
+    height: 300px;
     flex-direction: column;
     display: flex;
+    margin-left: 40px;
   }
 
   #img_inicial {
@@ -386,8 +388,9 @@ textarea {
     font-weight: 700px;
     font-weight: bold;
     text-align: center;
-    margin: 20px;
-    margin-left: 10px;
+    margin: 0px 0px 0px 0px;
+    margin-top: 50px;
+    
     
   }
   #mensagem__aguardando{
@@ -395,7 +398,7 @@ textarea {
     font-size: 24px;
     text-align: justify;
     margin-left: 10px;
-    margin: 20px;
+    margin: 0px 0px 0px 0px;
   }
 
   #copiar {
