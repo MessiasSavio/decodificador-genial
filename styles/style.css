@@ -254,7 +254,6 @@ textarea {
   .cabecalho {
     display: flex;
     flex-direction: column;
-    margin: 70px 0 0 5px;
     margin-bottom: 3%;
   }
   #texto_inicial {
@@ -266,12 +265,10 @@ textarea {
   .caractere__errado {
     margin-top: 450px;
     align-items: baseline;
-    margin: 40px 0px 0px 40px;
     align-items: center;
     margin-left: 40px;
   }
   .apresentacao__botao {
-    margin: 30px 0px 0px 10px;
     width: 100%;
     margin-left: 40px;
   }
@@ -296,7 +293,6 @@ textarea {
     font-size: 30px;
   }
   .apresentacao__resultado {
-    margin: 30px 0px 0px 10px;
     height: 133px;
     flex-direction: column;
     width: 90%;
