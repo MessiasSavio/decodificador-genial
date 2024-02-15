@@ -255,31 +255,35 @@ textarea {
     display: flex;
     flex-direction: column;
     margin: 70px 0 0 5px;
+    margin-bottom: 7%;
   }
   #texto_inicial {
+    margin-top:25%;
     flex-direction: row;
-    margin: 40px 0px 0px 40px;
+    margin: 5% 0px 0px 40px;
     width:90%;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
   }
   .caractere__errado {
     margin-top: 450px;
     align-items: baseline;
     margin: 40px 0px 0px 40px;
     align-items: center;
+    margin-left: 40px;
   }
   .apresentacao__botao {
     margin: 30px 0px 0px 10px;
     width: 100%;
+    margin-left: 40px;
   }
   #acao__criptrografar {
     font-size: 20px;
-    width: 460px;
+    width: 43%;
     height: 82px;
   }
   #acao__descptografar {
     font-size: 20px;
-    width: 460px;
+    width: 43%;
     height: 82px;
   }
   #acao__criptrografar:hover {
@@ -295,9 +299,13 @@ textarea {
   .apresentacao__resultado {
     margin-top: 64px;
     margin: 30px 0px 0px 10px;
-    width: 692px;
     height: 133px;
     flex-direction: column;
+    width: 90%;
+    margin-left: 40px;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
   }
   #img_inicial {
     display: none;
@@ -305,18 +313,16 @@ textarea {
   #mensagem__aguardando{
     margin-top: -10px;
     text-align: center;
-
-    text-align: center;
     margin-left: 10px;
     margin: 20px;
+    justify-content: center;
   }
   #texto_saida {
-    width: 600px;
+    width: 90%;
     height: 180px;
     margin-top: 5%;
-    margin-left: 5%;
-
-
+    margin-left: 4%;
+    margin-right: 5%;
   }
 
   #copiar {
@@ -326,8 +332,12 @@ textarea {
     align-items: center;
     justify-content: center;
     margin: 30px 0px 0px 0px;
-    margin-left: 90px;
+    margin-left: 24%;
   }
+  
+#rodape {
+  margin-top: 20%;
+}
 }
 
 /* Estilos para telas menores que 600px (celulares) */
