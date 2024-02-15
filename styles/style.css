@@ -260,7 +260,7 @@ textarea {
     flex-direction: row;
     margin: 5% 0px 0px 40px;
     width:90%;
-    margin-bottom: 20px;
+    height: 30%;
   }
   .caractere__errado {
     margin-top: 450px;
