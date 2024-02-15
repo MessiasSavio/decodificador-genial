@@ -258,7 +258,6 @@ textarea {
     margin-bottom: 7%;
   }
   #texto_inicial {
-    margin-top:25%;
     flex-direction: row;
     margin: 5% 0px 0px 40px;
     width:90%;
