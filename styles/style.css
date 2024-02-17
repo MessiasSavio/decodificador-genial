@@ -136,7 +136,7 @@ textarea {
 .apresentacao__resultado {
   background-color: white;
   border-radius: 30px;
-  height: 38rem;
+  height: 37rem;
   width: 32rem;
   box-shadow: 12px 18px 35px var(--cor--quintenaria);
   display: flex;
