@@ -124,7 +124,7 @@ function esconderImagem() {
   mensagem1.style.display = "none";
 
   if(larguraPagina>600 && larguraPagina<1200) {
-    apresentacaoResultado.style.height = '343px';
+    apresentacaoResultado.style.height = '550px';
   }
   larguraPagina<=600 ? apresentacaoResultado.style.height = '600px': '';
 
