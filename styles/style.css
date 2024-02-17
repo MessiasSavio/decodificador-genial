@@ -136,13 +136,13 @@ textarea {
 .apresentacao__resultado {
   background-color: white;
   border-radius: 30px;
-  height: 35.5rem;
+  height: 38.5rem;
   width: 32rem;
   box-shadow: 12px 18px 35px var(--cor--quintenaria);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -100px;
+  margin-top: -150px;
   justify-content: center;
 }
 
