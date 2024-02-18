@@ -140,6 +140,7 @@ function mostrarImagem() {
     apresentacaoResultado.style.height = '133px';
   }else if(larguraPagina<=600) {
     apresentacaoResultado.style.height = '186px';
+    imagem.style.display = "none";
   }
   
 }
@@ -167,5 +168,5 @@ btnCopiar.style.display = "none";
 function mostrarBotao() {
   btnCopiar.style.display = "flex";
   digitar2.style.display = "flex";
-}
+}''
 
