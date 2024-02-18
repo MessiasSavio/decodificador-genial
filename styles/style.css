@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --cor-primaria: #0a3871;
   --cor-secundaria: #d8dfe8;
@@ -47,6 +48,26 @@
   transition: 0.2s;
   margin-left: 40px;
 }
+.cabecalho__menu {
+  display: flex;
+  justify-content: baseline;
+}
+._ms {
+  font-size: 60px;
+  color: #0a3871;
+  cursor: default;
+}
+.ms {
+  font-family: "Noto Sans", sans-serif;
+  font-variation-settings: "wdth" 300;
+  font-size: 64px;
+  text-decoration: none;
+  color: #0a3871;
+  font-weight: 600;
+}
+.separacao_nomes {
+  margin: -15px 0px 0px -35px;
+}
 .main {
   padding: 2% 1%;
   display: flex;
@@ -73,7 +94,7 @@ textarea {
   color: #0a3871;
   font-size: 2rem;
   height: 100%;
-  padding: 7px;  
+  padding: 7px;
 }
 .caractere__errado {
   font-size: 1rem;
@@ -81,7 +102,7 @@ textarea {
   align-items: center;
   gap: 8px;
   color: rgb(75, 80, 86);
-  padding-bottom: 12px;
+  padding-bottom: 5px;
   justify-content: baseline;
   align-self: start;
 }
@@ -93,6 +114,7 @@ textarea {
 }
 
 .apresentacao__botao {
+  margin-top: -10px;
   gap: 8px;
   width: 680px;
   display: flex;
@@ -124,12 +146,12 @@ textarea {
 }
 #acao__criptrografar:hover {
   transition: 0.5s;
-  transform: scale(1.1);
+  transform: scale(1);
   font-size: 35px;
 }
 #acao__descptografar:hover {
   transition: 0.5s;
-  transform: scale(1.1);
+  transform: scale(1);
   font-size: 35px;
 }
 
@@ -237,44 +259,42 @@ li:hover {
   filter: drop-shadow(16px 16px 20px #0a3871) invert(50%);
 }
 .nome__rodape {
-  font-family: cursive;
-  font-weight: 800;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
   display: flex;
   text-align: center; /* Alinha o texto no centro */
-  font-style: italic;
 }
 span {
   font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 /* Estilos para tablets (entre 601px e 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
-  body {
-    overflow-y: visible;
-  }
   .main {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
+    justify-content: space-evenly;
+    padding: 20px;
   }
   .cabecalho {
     height: 20px;
     margin-top: 50px;
     margin-left: -10px;
   }
+  .separacao_nomes {
+    margin: -23px 0px 0px -35px;
+  }
   .digitacao {
-    position: absolute;
-    top: 0;
-    left: 0;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
   #texto_inicial {
-    display: block;
-    width: 98%;
+    width: 100%;
     height: 300px;
     align-items: center;
     justify-content: center;
@@ -282,8 +302,7 @@ span {
     margin-right: 40px;
   }
   .caractere__errado {
-    align-items: baseline;
-    margin-left: 40px;
+    margin-top: 40px;
   }
   .apresentacao__botao {
     width: 100%;
@@ -294,13 +313,13 @@ span {
   }
   #acao__criptrografar {
     font-size: 20px;
-    width: 43%;
+    width: 50%;
     height: 82px;
     padding: 0;
   }
   #acao__descptografar {
     font-size: 20px;
-    width: 43%;
+    width: 50%;
     height: 82px;
     padding: 0;
   }
@@ -315,10 +334,9 @@ span {
     font-size: 30px;
   }
   .apresentacao__resultado {
-    display: flex;
+    margin-top: 10px;
     height: 133px;
-    width: 97%;
-    margin-top: 60%;
+    width: 100%;
   }
   #img_inicial {
     display: none;
@@ -349,80 +367,56 @@ span {
     align-items: center;
     justify-content: center;
   }
-
   #rodape {
-    margin-top: 5%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 100%;
   }
 }
-
-/* Estilos para telas menores que 600px (celulares) */
-@media (max-width: 768px) {
-  .main {
+@media (max-width: 600px){
+  .main{
+    flex-direction: column;
+    margin-bottom: 10px;
+    flex-direction: column;
+    width: 100vw;
   }
-  .cabecalho {
-    display: flex;
-    flex-direction: row;
-    margin: 20px 0px 0px 0px;
-    margin-left: -20px;
-    transition: 0.2s;
-  }
-  #texto_inicial {
-    margin-top: 56px;
-    flex-direction: row;
-    margin: 20px 0px 0px 20px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .caractere__errado {
-    align-items: baseline;
-    margin: 40px 0px 0px 40px;
+  .cabecalho{
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    font-size: 12px;
+    display:block;
+    margin-top: 50px;
+    margin-left: -30px;
+  }
+  .separacao_nomes{
+    margin-top: -22px;
+    margin-left: -35px;
+  }
+  .digitacao{
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
+  }
+  #texto_inicial{
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    margin-bottom: 10px;
   }
   .apresentacao__botao {
-    display: flex;
-    margin: 0px 0px 0px 0px;
-    width: 90vw;
     flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
+    width: 100vw;
+    margin-left: 30px;
   }
-  .tex .apresentacao__resultado {
-    padding: 5%;
-    margin: 0px 0px 0px 0px;
-    width: 300px;
-    height: 300px;
-    flex-direction: column;
-    display: flex;
-    margin-left: 40px;
+  #acao__criptrografar, #acao__descptografar {
+    width:90vw; /* Define a largura como 100% do container em telas menores */
+    margin: 10px 0; /* Ajusta o espaçamento entre os botões em telas menores */
   }
-
+  .apresentacao__resultado{
+    margin-top: 10px;
+    width: 100vw;
+    height: 28vh;
+  }
   #img_inicial {
     display: none;
-  }
-
-  #mensagem {
-    font-size: 27px;
-    font-weight: 700px;
-    font-weight: bold;
-    text-align: center;
-    margin: 0px 0px 0px 0px;
-    margin-top: 50px;
-  }
-  #mensagem__aguardando {
-    font-size: 24px;
-    text-align: justify;
-    margin: 0px 0px 0px 0px;
-    padding: 5%;
-  }
-
-  #copiar {
-    margin-top: 7%;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 0px 0px 0px;
-  }
+  } 
 }
