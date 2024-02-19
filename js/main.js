@@ -123,20 +123,20 @@ function esconderImagem() {
   mensagem.style.display = "none";
   mensagem1.style.display = "none";
 
-  if(larguraPagina>600 && larguraPagina<1200) {
-    apresentacaoResultado.style.height = '550px';
+  if(larguraPagina>600 && larguraPagina<=1024) {
+    apresentacaoResultado.style.height = '600px';
   }
-  larguraPagina<=600 ? apresentacaoResultado.style.height = '600px': '';
+  larguraPagina<=600 ? apresentacaoResultado.style.height = '500px': '';
 
 }
 
 function mostrarImagem() {
-  larguraPagina>1200 ? imagem.style.display = "flex" : imagem.style.display = "none";
+  larguraPagina>1024 ? imagem.style.display = "flex" : imagem.style.display = "none";
   mensagem.style.display = 'flex';
   mensagem1.style.display = 'flex';
   btnCopiar.style.display = "none";
   digitar2.style.display = "none";
-  if(larguraPagina>600 && larguraPagina<1200) {
+  if(larguraPagina>600 && larguraPagina<=1024) {
     apresentacaoResultado.style.height = '133px';
   }else if(larguraPagina<=600) {
     apresentacaoResultado.style.height = '186px';
