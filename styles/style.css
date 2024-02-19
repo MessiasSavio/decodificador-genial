@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --cor-primaria: #0a3871;
@@ -65,15 +64,14 @@
   color: #0a3871;
   font-weight: 600;
 }
-.separacao_nomes {
-  margin: -15px 0px 0px -35px;
-}
+
 .main {
   padding: 2% 1%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 20px;
+  width: 100%;
 }
 
 textarea {
@@ -86,6 +84,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 #texto_inicial {
   background-color: transparent;
@@ -159,13 +158,13 @@ textarea {
   background-color: white;
   border-radius: 30px;
   height: 38.5rem;
-  width: 32rem;
   box-shadow: 12px 18px 35px var(--cor--quintenaria);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -150px;
+  margin-top: -10%;
   justify-content: center;
+  width: 100%;
 }
 
 #mensagem {
@@ -282,11 +281,7 @@ span {
   }
   .cabecalho {
     height: 20px;
-    margin-top: 50px;
-    margin-left: -10px;
-  }
-  .separacao_nomes {
-    margin: -23px 0px 0px -35px;
+    margin-bottom: 50px;
   }
   .digitacao {
     align-items: center;
@@ -344,7 +339,7 @@ span {
   #mensagem {
     margin-top: 10px;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: bold;
   }
   #mensagem__aguardando {
     text-align: center;
@@ -368,55 +363,71 @@ span {
     justify-content: center;
   }
   #rodape {
+    margin-top: 40%;
     display: grid;
     grid-template-rows: auto 1fr;
     width: 100%;
   }
 }
 @media (max-width: 600px){
+  .body{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-y: visible;
+  }
   .main{
     flex-direction: column;
     margin-bottom: 10px;
-    flex-direction: column;
-    width: 100vw;
+    align-items: center;
+    width: 100%;
   }
   .cabecalho{
+    margin-top: 50px;
+    width: 100vw;
+  }
+  .cabecalho__menu{
+    margin-left: -30px ;
+    width: 90vw;
     justify-content: center;
     align-items: center;
-    display:block;
-    margin-top: 50px;
-    margin-left: -30px;
   }
-  .separacao_nomes{
-    margin-top: -22px;
-    margin-left: -35px;
-  }
+
   .digitacao{
-    width: 100vw;
+    width: 98vw;
     align-items: center;
     justify-items: center;
   }
   #texto_inicial{
-    width: 100vw;
+    width: 98vw;
     height: 25vh;
     display: flex;
     margin-bottom: 10px;
   }
   .apresentacao__botao {
     flex-direction: column;
-    width: 100vw;
-    margin-left: 30px;
+    width: 98vw;
   }
   #acao__criptrografar, #acao__descptografar {
-    width:90vw; /* Define a largura como 100% do container em telas menores */
-    margin: 10px 0; /* Ajusta o espaçamento entre os botões em telas menores */
+    width:98vw; 
+    margin: 10px 0; 
   }
   .apresentacao__resultado{
     margin-top: 10px;
-    width: 100vw;
-    height: 28vh;
+    width: 95vw;
+    height: 50vh;
   }
   #img_inicial {
     display: none;
   } 
+  #copiar{
+    margin-top: 3px;
+  }
+  #mensagem{
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  #rodape{
+    width: 100vw;
+  }
 }
