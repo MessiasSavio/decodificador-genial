@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url(https://db.onlinewebfonts.com/c/af84fb6beb2286da347505980f085929?family=Maqui+W00+Regular);
 :root {
   --cor-primaria: #0a3871;
   --cor-secundaria: #d8dfe8;
@@ -12,6 +13,8 @@
   --forte--secundaria: "Montserrat", sans-serif;
 }
 * {
+  transition: 0.5s;
+  transform: scale(1);
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
@@ -52,13 +55,16 @@
   justify-content: baseline;
 }
 ._ms {
-  font-size: 60px;
+  font-family: "Maqui W00 Regular";
+  font-size: 64px;
   color: #0a3871;
   cursor: default;
+  margin-left: 5px;
+  margin-right: 5px;
+
 }
 .ms {
-  font-family: "Noto Sans", sans-serif;
-  font-variation-settings: "wdth" 300;
+  font-family: "Maqui W00 Regular";
   font-size: 64px;
   text-decoration: none;
   color: #0a3871;
@@ -164,7 +170,7 @@ textarea {
   align-items: center;
   margin-top: -10%;
   justify-content: center;
-  width: 100%;
+  width: 80%;
 }
 
 #mensagem {
@@ -257,18 +263,11 @@ li:hover {
   filter: hue-rotate(90deg);
   filter: drop-shadow(16px 16px 20px #0a3871) invert(50%);
 }
-.nome__rodape {
-  font-weight: bold;
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  display: flex;
-  text-align: center; /* Alinha o texto no centro */
-}
+
 span {
   font-weight: bold;
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: "Maqui W00 Regular";
+  font-size: 25px;
 }
 
 /* Estilos para tablets (entre 601px e 1024px) */
@@ -369,28 +368,32 @@ span {
     width: 100%;
   }
 }
-@media (max-width: 600px){
+
+@media (min-width: 320px) and (max-width: 768px){
+  *{
+    overflow-x:hidden;
+  }
   .body{
     height: 100vh;
-    width: 100vw;
-    overflow-y: hidden;
-    overflow-y: visible;
+    width: 100%;
   }
+
   .main{
     flex-direction: column;
     margin-bottom: 10px;
     align-items: center;
-    width: 100%;
   }
   .cabecalho{
-    margin-top: 50px;
-    width: 100vw;
+    width: 100%;
+    margin-left: -2%;
+    
   }
   .cabecalho__menu{
-    margin-left: -30px ;
-    width: 90vw;
+    display: flex;
+    width: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+
   }
 
   .digitacao{

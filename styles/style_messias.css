@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url(https://db.onlinewebfonts.com/c/af84fb6beb2286da347505980f085929?family=Maqui+W00+Regular);
 
 :root {
   --cor-primaria: #d8dfe8;
@@ -10,8 +10,9 @@
   --forte--primaria: "Krona One", sans-serif;
   --forte--secundaria: "Montserrat", sans-serif;
 }
-
 * {
+  transition: 0.5s;
+  transform: scale(1);
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
@@ -39,9 +40,10 @@
 .body {
   background: var(--cor-primaria);
   box-sizing: border-box;
+
 }
 .cabecalho {
-  display: block;
+  display: flex;
   flex-direction: column;
   margin: 40px 0 0 40px;
   transition: 0.2s;
@@ -58,27 +60,16 @@
 }
 .ms {
   font-family: "Noto Sans", sans-serif;
-  font-variation-settings: "wdth" 300;
   font-size: 64px;
   text-decoration: none;
   color: #0a3871;
   font-weight: 600;
-  margin-left: -45px;
 }
-.separacao_nomes {
-  margin: -48px 0px 0px -35px;
-  margin-left: -130px;
-
-}
-.Imagem__cabecalho{
-  margin: -45px 0px 0px -35px;
-
-}
-
-
 .apresentacao__conteudo{
   display: flex;
   justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   margin-left: 5px;
   margin-right: 15px;
 }
@@ -87,16 +78,25 @@
   display: flex;
   justify-content: space-around;
 }
-.coteudo_bloco{
+.coteudo_bloco_1,.coteudo_bloco_2, .coteudo_bloco_3 {
   border: 3px solid #0a3871;
   border-radius: 0px 50px 0px 50px;
   padding: 40px;
-  width:25vw;
+  width:26vw;
+  margin-left: 20px;
+}
+.coteudo_bloco_1{
+  height: 550px;
+}
+.coteudo_bloco_2{
+  height: 700px;
+}
+.coteudo_bloco_3{
   height: auto;
-  margin-left: 10px;
+
 }
 .coteudo_bloco_imagem{
-  border: 3px solid #0a3871;
+  border: 4px solid #0a3871;
   border-radius: 0px 50px 50px 50px;
   padding: 40px;
   width:100%;
@@ -107,22 +107,25 @@
   justify-content: space-around;
 }
 .apresentacao__imamgem{
-  margin-top: 20%;
+  margin-top: 30%;
   width: 400px;
-  height: 500px;
+  height: 600px;
   border-radius: 30px;
   border: 3px solid #0a3871;
+  margin-left: 5px;
 
 }
-h1{
-  font-size: 2.25rem;
+.apresentacao__conteudo__titulo{
+  font-family: "Maqui W00 Regular";
+  font-size: 4rem;
   display: flex;
   color: #0a3871;
 }
 
 .lista_item, .apresentacao__conteudo__texto{
-  font-size:1.25rem;
+  font-size:2rem;
   margin-top: 5%;
+  font-family: "Maqui W00 Regular";
 }
 .rodape__links ul {
   display: flex; /* Adiciona display flex para centralizar os itens */
@@ -143,7 +146,11 @@ h1{
   justify-content: center;
   height: 60px; /* Ajuste a altura conforme necessário */
 }
-.rodape__links,.li_rodape {
+.rodape__links ul {
+  display: flex; /* Adiciona display flex para centralizar os itens */
+  justify-content: center; /* Centralize os itens horizontalmente */
+}
+.rodape__links li {
   display: inline-block;
   margin-right: 10px; /* Adiciona espaço entre os itens */
 }
@@ -162,7 +169,137 @@ h1{
 }
 span {
   font-weight: bold;
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: "Maqui W00 Regular";
+}
+
+
+
+
+@media (min-width: 601px) and (max-width: 1024px){
+  *{
+    overflow-x:hidden;
+  }
+  .cabecalho{
+    align-items: center;
+    justify-content: center;  
+  }
+
+  .main{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .apresentacao__conteudo{
+    padding-right: 2.3%;
+    width: 100vw;
+  }
+  .coteudo_bloco_imagem{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .coteudo_bloco_1,.coteudo_bloco_2, .coteudo_bloco_3 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .apresentacao__conteudo{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+  }
+  .coteudo{
+    width: 100%;
+  }
+  .apresentacao__conteudo__titulo{
+    justify-content: center;
+    }
+
+}
+@media (min-width: 320px) and (max-width: 768px){
+  *{
+    overflow-x:hidden;
+  }
+  .cabecalho{
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .coteudo{
+    width: 100vw;
+  }
+  ._ms, .ms{
+    font-size: 3rem;
+  }
+  .main{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .apresentacao__conteudo{
+    width: 100vw;
+    justify-content: center;
+
+  }
+  .coteudo_bloco_imagem{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin-left: -10px;
+  }
+  .coteudo_bloco_1,.coteudo_bloco_2, .coteudo_bloco_3 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .apresentacao__conteudo{
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .coteudo{
+    width: 95%;
+    margin-left: -30px;
+    gap: 10px;
+  }
+  .apresentacao__imamgem{
+    width: 90vw;
+    height: auto;
+  }
+  .apresentacao__conteudo__titulo{
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+  }
+  .apresentacao__conteudo__texto{
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+  #rodape{
+    display: flex;
+    width: 100vw;
+    height: 80px;
+  }
+  .itens_rodape{
+    margin-top: 15px;
+    height: 50px;
+    width: 100vw;
+    margin-bottom: -15px;
+    display: flex;
+  }
+  .li_rodape:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    filter: hue-rotate(90deg);
+    filter: drop-shadow(16px 16px 20px #0a3871) invert(50%);
+  }
+
 }
