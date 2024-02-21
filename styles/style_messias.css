@@ -130,6 +130,7 @@
   display: flex; /* Adiciona display flex para centralizar os itens */
   justify-content: center; /* Centralize os itens horizontalmente */
 }
+
 #rodape {
   margin-top: 50px;
   background-color: #0a3871;
@@ -159,21 +160,12 @@
   filter: hue-rotate(90deg);
   filter: drop-shadow(16px 16px 20px #0a3871) invert(50%);
 }
-.nome__rodape {
-  font-weight: bold;
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  display: flex;
-  text-align: center; /* Alinha o texto no centro */
-}
+
 span {
   font-weight: bold;
   font-family: "Maqui W00 Regular";
+  font-size: 25px;
 }
-
-
-
-
 @media (min-width: 601px) and (max-width: 1024px){
   body, html,.main{
     overflow-x:hidden;
@@ -288,14 +280,10 @@ span {
     text-align: justify;
     margin-bottom: 40px;
   }
-  .li_rodape:hover{
-    transition: 0.5s;
-    transform: scale(1.1);
-    filter: hue-rotate(90deg);
-    filter: drop-shadow(16px 16px 20px #0a3871) invert(50%);
+  #rodape{
+    width: 100vw;
   }
   .li_rodape{
     width: 100vw;
   }
-
 }
