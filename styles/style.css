@@ -370,8 +370,9 @@ span {
 }
 
 @media (min-width: 320px) and (max-width: 768px){
-  *{
+  body, html{
     overflow-x:hidden;
+    width: 100%;
   }
   .body{
     height: 100vh;
@@ -426,11 +427,17 @@ span {
   #copiar{
     margin-top: 3px;
   }
+  .caractere__errado{
+    font-size: 13px;
+  }
   #mensagem{
     font-weight: bold;
     margin-top: 5px;
   }
   #rodape{
+    width: 100vw;
+  }
+  .li_rodape{
     width: 100vw;
   }
 }

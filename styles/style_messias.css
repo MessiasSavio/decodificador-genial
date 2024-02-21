@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..900&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(https://db.onlinewebfonts.com/c/af84fb6beb2286da347505980f085929?family=Maqui+W00+Regular);
 
 :root {
@@ -176,7 +175,7 @@ span {
 
 
 @media (min-width: 601px) and (max-width: 1024px){
-  *{
+  body, html,.main{
     overflow-x:hidden;
   }
   .cabecalho{
@@ -191,8 +190,9 @@ span {
     width: 100%;
   }
   .apresentacao__conteudo{
-    padding-right: 2.3%;
     width: 100vw;
+    padding-right: 4vw;
+    padding-left: 0;
   }
   .coteudo_bloco_imagem{
     flex-direction: column-reverse;
@@ -216,12 +216,13 @@ span {
   }
   .apresentacao__conteudo__titulo{
     justify-content: center;
-    }
+  }
 
 }
 @media (min-width: 320px) and (max-width: 768px){
-  *{
+  body, html{
     overflow-x:hidden;
+    width: 100%;
   }
   .cabecalho{
     align-items: center;
@@ -238,41 +239,45 @@ span {
   .main{
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content:center;
+    width: 100%;    
+    margin-left: -1.2vw;
   }
   .apresentacao__conteudo{
     width: 100vw;
     justify-content: center;
+    padding-right: 4vw;
 
   }
   .coteudo_bloco_imagem{
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    width: 95%;
-    margin-left: -10px;
+    width: 95vw;
+    display: flex;
+
   }
   .coteudo_bloco_1,.coteudo_bloco_2, .coteudo_bloco_3 {
     width: 100%;
-    height: auto;
     flex-direction: column;
+    height: auto;
+    margin-left: 9vw;
+
   }
   .apresentacao__conteudo{
     width: 100vw;
     flex-direction: column;
     justify-content: center;
     display: flex;
-    align-items: center;
   }
   .coteudo{
-    width: 95%;
-    margin-left: -30px;
+    width: 100%;
+    margin-left: -10px;
     gap: 10px;
   }
   .apresentacao__imamgem{
     width: 90vw;
-    height: auto;
+    height: 600px;
   }
   .apresentacao__conteudo__titulo{
     justify-content: center;
@@ -283,23 +288,14 @@ span {
     text-align: justify;
     margin-bottom: 40px;
   }
-  #rodape{
-    display: flex;
-    width: 100vw;
-    height: 80px;
-  }
-  .itens_rodape{
-    margin-top: 15px;
-    height: 50px;
-    width: 100vw;
-    margin-bottom: -15px;
-    display: flex;
-  }
   .li_rodape:hover{
     transition: 0.5s;
     transform: scale(1.1);
     filter: hue-rotate(90deg);
     filter: drop-shadow(16px 16px 20px #0a3871) invert(50%);
+  }
+  .li_rodape{
+    width: 100vw;
   }
 
 }
