@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url(https://db.onlinewebfonts.com/c/af84fb6beb2286da347505980f085929?family=Maqui+W00+Regular);
 :root {
   --cor-primaria: #0a3871;
@@ -179,6 +178,10 @@ textarea {
   font-weight: 800;
   text-align: center;
   justify-content: center;
+}
+strong{
+  color: #020202;
+  font-weight: bold;
 }
 #mensagem__aguardando {
   padding-left: 8px;
@@ -396,7 +399,6 @@ span {
     align-items: center; 
 
   }
-
   .digitacao{
     width: 98vw;
     align-items: center;
@@ -431,8 +433,12 @@ span {
     font-size: 13px;
   }
   #mensagem{
-    font-weight: bold;
     margin-top: 5px;
+  }
+  h1{
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+
   }
   #rodape{
     width: 100vw;
