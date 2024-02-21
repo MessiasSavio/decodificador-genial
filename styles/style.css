@@ -435,14 +435,15 @@ span {
   #mensagem{
     margin-top: 5px;
   }
+  h1{
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+
+  }
   #rodape{
     width: 100vw;
   }
   .li_rodape{
     width: 100vw;
-  }
-  strong{
-    color: #020202;
-    font-weight: bold;
   }
 }

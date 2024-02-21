@@ -83,17 +83,9 @@
   padding: 40px;
   width:26vw;
   margin-left: 20px;
-}
-.coteudo_bloco_1{
-  height: 550px;
-}
-.coteudo_bloco_2{
-  height: 700px;
-}
-.coteudo_bloco_3{
   height: auto;
-
 }
+
 .coteudo_bloco_imagem{
   border: 4px solid #0a3871;
   border-radius: 0px 50px 50px 50px;
@@ -116,7 +108,7 @@
 }
 .apresentacao__conteudo__titulo{
   font-family: "Maqui W00 Regular";
-  font-size: 4rem;
+  font-size: 3.8rem;
   display: flex;
   color: #0a3871;
 }
@@ -129,6 +121,10 @@
 .rodape__links ul {
   display: flex; /* Adiciona display flex para centralizar os itens */
   justify-content: center; /* Centralize os itens horizontalmente */
+}
+strong{
+  color: #020202;
+  font-weight: bold;
 }
 
 #rodape {
