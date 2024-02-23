@@ -53,11 +53,13 @@
   justify-content: baseline;
 }
 ._ms {
+  font-family: "Maqui W00 Regular";
   font-size: 60px;
   color: #0a3871;
   cursor: default;
 }
 .ms {
+  font-family: "Maqui W00 Regular";
   font-family: "Noto Sans", sans-serif;
   font-size: 64px;
   text-decoration: none;
