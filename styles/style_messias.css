@@ -60,11 +60,9 @@
 }
 .ms {
   font-family: "Maqui W00 Regular";
-  font-family: "Noto Sans", sans-serif;
   font-size: 64px;
   text-decoration: none;
   color: #0a3871;
-  font-weight: 600;
 }
 .apresentacao__conteudo{
   display: flex;
