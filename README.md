@@ -39,8 +39,8 @@ Desenvolver uma aplicação que:
 - Botão para copiar o texto criptografado/descriptografado para a área de transferência. 🖱️
 - Interface intuitiva e amigável. 😊
 - About do Criador (Página externa com informações suas).👨🏻‍💻
-- - Crie um Rodapé;
-<img src=“https://github.com/MessiasSavio/decodificador-genial/assets/150685178/9d77ad80-a276-4ca6-88b0-27394f81ff76” alt=“BaseboardsCleaningGIF” width=“300” height=“300”/>
+- Crie um Rodapé:
+<img src="https://github.com/MessiasSavio/decodificador-genial/assets/150685178/9d77ad80-a276-4ca6-88b0-27394f81ff76" width="300" height="200" alt="BaseboardsCleaningGIF">
 
 # Baixe o projeto e Divirta-se!🎉
 
